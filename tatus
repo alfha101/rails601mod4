@@ -1,0 +1,572 @@
+=> [32m#<struct ActiveSupport::Callbacks::Filters::Environment[0m
+ target[32m=[0m
+  [32m#<BusinessesController:0x000055c092432d50[0m
+   @_action_name[32m=[0m[31m[1;31m"[0m[31mcreate[1;31m"[0m[31m[0m,
+   @_config[32m=[0m{},
+   @_db_runtime[32m=[0m[1;35m4.332278[0m,
+   @_env[32m=[0m
+    {[31m[1;31m"[0m[31mrack.version[1;31m"[0m[31m[0m=>[[1;34m1[0m, [1;34m3[0m],
+     [31m[1;31m"[0m[31mrack.errors[1;31m"[0m[31m[0m=>[32m#<IO:<STDERR>>[0m,
+     [31m[1;31m"[0m[31mrack.multithread[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+     [31m[1;31m"[0m[31mrack.multiprocess[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+     [31m[1;31m"[0m[31mrack.run_once[1;31m"[0m[31m[0m=>[1;36mfalse[0m,
+     [31m[1;31m"[0m[31mSCRIPT_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mQUERY_STRING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_PROTOCOL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_SOFTWARE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mpuma 3.6.2 Sleepy Sunday Serenity[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mGATEWAY_INTERFACE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mCGI/1.2[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREQUEST_METHOD[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mPOST[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREQUEST_PATH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/api/businesses[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREQUEST_URI[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/api/businesses[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_VERSION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mHTTP/1.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_HOST[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost:3000[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_CONNECTION[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mkeep-alive[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mCONTENT_LENGTH[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m35[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_CACHE_CONTROL[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mmax-age=0[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ORIGIN[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ACCESS_TOKEN[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m_hhV5t6csPd-ANMg0pfXkw[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_CLIENT[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mXHlCGlQ9NyMumFrUDAAYJg[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mCONTENT_TYPE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mapplication/json;charset=UTF-8[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ACCEPT[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mapplication/json, text/plain, */*[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_EXPIRY[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m1540689261[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_UID[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31malice@bbunch.org[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_IF_MODIFIED_SINCE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mMon, 26 Jul 1997 05:00:00 GMT[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_TOKEN_TYPE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mBearer[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_USER_AGENT[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mMozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_REFERER[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp://localhost:3000/[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ACCEPT_ENCODING[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mgzip, deflate, br[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_ACCEPT_LANGUAGE[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mes-ES,es;q=0.9,en-US;q=0.8,en;q=0.7[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mHTTP_COOKIE[1;31m"[0m[31m[0m=>
+      [31m[1;31m"[0m[31mauth_headers=%7B%22access-token%22%3A%22_hhV5t6csPd-ANMg0pfXkw%22%2C%22token-type%22%3A%22Bearer%22%2C%22client%22%3A%22XHlCGlQ9NyMumFrUDAAYJg%22%2C%22expiry%22%3A%221540689261%22%2C%22uid%22%3A%22alice%40bbunch.org%22%7D; currentConfigName=default[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_NAME[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mSERVER_PORT[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m3000[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mPATH_INFO[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m/api/businesses[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mREMOTE_ADDR[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31m127.0.0.1[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mpuma.socket[1;31m"[0m[31m[0m=>[32m#<TCPSocket:fd 17>[0m,
+     [31m[1;31m"[0m[31mrack.hijack?[1;31m"[0m[31m[0m=>[1;36mtrue[0m,
+     [31m[1;31m"[0m[31mrack.hijack[1;31m"[0m[31m[0m=>[32m#<Puma::Client:0x2ae0492997a4 @ready=true>[0m,
+     [31m[1;31m"[0m[31mrack.input[1;31m"[0m[31m[0m=>[32m#<StringIO:0x000055c0923d1640[0m[32m>[0m,
+     [31m[1;31m"[0m[31mrack.url_scheme[1;31m"[0m[31m[0m=>[31m[1;31m"[0m[31mhttp[1;31m"[0m[31m[0m,
+     [31m[1;31m"[0m[31mrack.after_reply[1;31m"[0m[31m[0m=>[],
+     [31m[1;31m"[0m[31mpuma.config[1;31m"[0m[31m[0m=>
+      [32m#<Puma::Configuration:0x000055c08f8cbec8[0m
+       @options[32m=[0m
+        [32m#<Puma::LeveledOptions:0x000055c08f8cbab8[0m
+         @cur[32m=[0m{},
+         @defaults[32m=[0m
+          {[33m:min_threads[0m=>[1;34m0[0m,
+           [33m:max_threads[0m=>[1;34m16[0m,
+           [33m:log_requests[0m=>[1;36mfalse[0m,
+           [33m:debug[0m=>[1;36mfalse[0m,
+           [33m:binds[0m=>[[31m[1;31m"[0m[31mtcp://0.0.0.0:9292[1;31m"[0m[31m[0m],
+           [33m:workers[0m=>[1;34m0[0m,
+           [33m:daemon[0m=>[1;36mfalse[0m,
+           [33m:mode[0m=>[33m:http[0m,
+           [33m:worker_timeout[0m=>[1;34m60[0m,
+           [33m:worker_boot_timeout[0m=>[1;34m60[0m,
+           [33m:worker_shutdown_timeout[0m=>[1;34m30[0m,
+           [33m:remote_address[0m=>[33m:socket[0m,
+           [33m:tag[0m=>[31m[1;31m"[0m[31msecurity-assignment[1;31m"[0m[31m[0m,
+           [33m:environment[0m=>[31m[1;31m"[0m[31mdevelopment[1;31m"[0m[31m[0m,
+           [33m:rackup[0m=>[31m[1;31m"[0m[31mconfig.ru[1;31m"[0m[31m[0m,
+           [33m:logger[0m=>[32m#<IO:<STDOUT>>[0m,
+           [33m:persistent_timeout[0m=>[1;34m20[0m},
+         @set[32m=[0m
+          [{[33m:environment[0m=>[31m[1;31m"[0m[31mdevelopment[1;31m"[0m[31m[0m,
+            [33m:pid[0m=>[31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/tmp/pids/server.pid[1;31m"[0m[31m[0m,
+            [33m:Port[0m=>[1;34m3000[0m,
+            [33m:Host[0m=>[31m[1;31m"[0m[31mlocalhost[1;31m"[0m[31m[0m,
+            [33m:AccessLog[0m=>[],
+            [33m:config[0m=>[31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/config.ru[1;31m"[0m[31m[0m,
+            [33m:DoNotReverseLookup[0m=>[1;36mtrue[0m,
+            [33m:daemonize[0m=>[1;36mfalse[0m,
+            [33m:debugger[0m=>[1;36mfalse[0m,
+            [33m:log_stdout[0m=>[1;36mtrue[0m,
+            [33m:server[0m=>[1;36mnil[0m},
+           {[33m:log_requests[0m=>[1;36mfalse[0m,
+            [33m:environment[0m=>[31m[1;31m"[0m[31mdevelopment[1;31m"[0m[31m[0m,
+            [33m:binds[0m=>[[31m[1;31m"[0m[31mtcp://localhost:3000[1;31m"[0m[31m[0m],
+            [33m:app[0m=>
+             [32m#<Rack::ContentLength:0x000055c08f8d0900[0m
+              @app[32m=[0m
+               [32m#<Myapp::Application:0x000055c0922d54f8[0m
+                @_all_autoload_paths[32m=[0m
+                 [[31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/assets[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/controllers[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/helpers[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/mailers[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/models[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/policies[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/controllers/concerns[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/models/concerns[1;31m"[0m[31m[0m],
+                @_all_load_paths[32m=[0m
+                 [[31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/lib[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/assets[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/controllers[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/helpers[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/mailers[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/models[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/policies[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/controllers/concerns[1;31m"[0m[31m[0m,
+                  [31m[1;31m"[0m[31m/home/alfonso/Documents/capstone2/module4/security-assignment/app/models/concerns[1;31m"[0m[31m[0m],
+                @app[32m=[0m
+                 [32m#<Rack::Cors:0x000055c0928ee358[0m
+                  @all_resources[32m=[0m
+                   [[32m#<Rack::Cors::Resources:0x000055c0928ee240[0m
+                     @origins[32m=[0m[[35m[1;35m/[0m[35mhttps:[1;35m\/[0m[35m[1;35m\/[0m[35m[1;35m\w[0m[35m+[1;35m\.[0m[35mgithub[1;35m\.[0m[35mio[1;35m/[0m[35m[0m],
+                     @public_resources[32m=[0m[1;36mfalse[0m,
+                     @resources[32m=[0m
+                      [[32m#<Rack::Cors::Resource:0x000055c0928edef8[0m
+                        @credentials[32m=[0m[1;36mtrue[0m,
+                        @expose[32m=[0m[[31m[1;31m"[0m[31maccess-token[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mexpiry[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mtoken-type[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31muid[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mclient[1;31m"[0m[31m[0m],
+                        @headers[32m=[0m[33m:any[0m,
+                        @if_proc[32m=[0m[1;36mnil[0m,
+                        @max_age[32m=[0m[1;34m1728000[0m,
+                        @methods[32m=[0m[[31m[1;31m"[0m[31mget[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mpost[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mput[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31mdelete[1;31m"[0m[31m[0m, [31m[1;31m"[0m[31moptions[1;31m"[0m[31m[0m],
+                        @path[32m=[0m[31m[1;31m"[0m[31m*[1;31m"[0m[31m[0m,
+                        @pattern[32m=[0m[35m[1;35m/[0m[35m^(.*?)$[1;35m/[0m[35m[0m,
+                        @public_resource[32m=[0m[1;36mfalse[0m,
+                        @vary_headers[32m=[0m[1;36mnil[0m[32m>[0m][32m>[0m],
+                  @app[32m=[0m
+                   [32m#<ActionDispatch::Static:0x000055c092855860[0m
+                    @app[32m=[0m
+                     [32m#<Rack::Lock:0x000055c0928558d8[0m
+                      @app[32m=[0m
+                       [32m#<ActiveSupport::Cache::Strategy::LocalCache::Middleware:0x000055c0924a8f28[0m
+                        @app[32m=[0m
+                         [32m#<Rack::Runtime:0x000055c092855928[0m
+                          @app[32m=[0m
+                           [32m#<ActionDispatch::RequestId:0x000055c092855950[0m
+                            @app[32m=[0m
+                             [32m#<Rails::Rack::Logger:0x000055c0928559a0[0m
+                              @app[32m=[0m
+                               [32m#<ActionDispatch::ShowExceptions:0x000055c0928559c8[0m
+                                @app[32m=[0m
+                                 [32m#<ActionDispatch::DebugExceptions:0x000055c0928559f0[0m
+                                  @app[32m=[0m
+                                   [32m#<ActionDispatch::RemoteIp:0x000055c092855a18[0m
+                                    @app[32m=[0m
+                                     [32m#<ActionDispatch::Reloader:0x000055c092855a40[0m
+                                      @app[32m=[0m
+                                       [32m#<ActionDispatch::Callbacks:0x000055c092855a68[0m
+                                        @app[32m=[0m
+                                         [32m#<ActiveRecord::Migration::CheckPending:0x000055c092855a90[0m
+                                          @app[32m=[0m
+                                           [32m#<ActiveRecord::ConnectionAdapters::ConnectionManagement:0x000055c092855bd0[0m
+                                            @app[32m=[0m
+                                             [32m#<ActiveRecord::QueryCache:0x000055c09282b880[0m
+                                              @app[32m=[0m
+                                               [32m#<ActionDispatch::ParamsParser:0x000055c092826fd8[0m
+                                                @app[32m=[0m
+                                                 [32m#<Rack::Head:0x000055c092827000[0m
+                                                  @app[32m=[0m
+                                                   [32m#<Rack::ConditionalGet:0x000055c092827028[0m
+                                                    @app[32m=[0m
+                                                     [32m#<Rack::ETag:0x000055c092827050[0m
+                                                      @app[32m=[0m
+                                                       [32m#<Warden::Manager:0x000055c092827118[0m
+                                                        @app[32m=[0m
+                                                         [32m#<ActionDispatch::Routing::RouteSet:0x000055c09242afd8[0m
+                                                          @append[32m=[0m
+                                                           [[32m#<Proc:0x000055c0926e11a0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:24>[0m,
+                                                            [32m#<Proc:0x000055c0926c9140@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionmailer-4.2.6/lib/action_mailer/railtie.rb:44>[0m],
+                                                          @default_url_options[32m=[0m{},
+                                                          @devise_finalized[32m=[0m[1;36mtrue[0m,
+                                                          @disable_clear_and_finalize[32m=[0m[1;36mfalse[0m,
+                                                          @finalized[32m=[0m[1;36mtrue[0m,
+                                                          @formatter[32m=[0m
+                                                           [32m#<ActionDispatch::Journey::Formatter:0x000055c09242ace0[0m
+                                                            @cache[32m=[0m[1;36mnil[0m,
+                                                            @routes[32m=[0m
+                                                             [32m#<ActionDispatch::Journey::Routes:0x000055c09242ad80[0m
+                                                              @ast[32m=[0m
+                                                               [32m#<ActionDispatch::Journey::Nodes::Or:0x000055c0929b4670[0m
+                                                                @children[32m=[0m
+                                                                 [[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m
+                                                                   @left[32m=[0m
+                                                                    [32m#<ActionDispatch::Journey::Nodes::Slash:0x000055c0915b5bb0[0m
+                                                                     @left[32m=[0m[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                     @memo[32m=[0m
+                                                                      [32m#<ActionDispatch::Journey::Route:0x000055c0915b3cc0[0m
+                                                                       @app[32m=[0m
+                                                                        [32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b4dc8[0m @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                       @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                       @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m,
+                                                                       @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m},
+                                                                       @name[32m=[0m[31m[1;31m"[0m[31mauthn_whoami[1;31m"[0m[31m[0m,
+                                                                       @parts[32m=[0m[[33m:format[0m],
+                                                                       @path[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b4c88[0m
+                                                                         @anchored[32m=[0m[1;36mtrue[0m,
+                                                                         @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                         @offsets[32m=[0m[[1;34m0[0m, [1;34m0[0m],
+                                                                         @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                         @re[32m=[0m[35m[1;35m/[0m[35m[1;35m\A[0m[35m[1;35m\/[0m[35mauthn[1;35m\/[0m[35mwhoami(?:[1;35m\.[0m[35m([^[1;35m\/[0m[35m.?]+))?[1;35m\Z[0m[35m[1;35m/[0m[35m[0m,
+                                                                         @required_names[32m=[0m[],
+                                                                         @requirements[32m=[0m{},
+                                                                         @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                         @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m[32m>[0m,
+                                                                       @path_formatter[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Format:0x000055c0915b36d0[0m
+                                                                         @children[32m=[0m[[1;34m4[0m],
+                                                                         @parameters[32m=[0m[],
+                                                                         @parts[32m=[0m
+                                                                          [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                           [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                           [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                           [31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m,
+                                                                           [32m#<ActionDispatch::Journey::Format:0x000055c0915b3950[0m
+                                                                            @children[32m=[0m[],
+                                                                            @parameters[32m=[0m[[1;34m1[0m],
+                                                                            @parts[32m=[0m
+                                                                             [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                              [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                               name[32m=[0m[33m:format[0m,
+                                                                               escaper[32m=[0m
+                                                                                [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                       @precedence[32m=[0m[1;34m1[0m,
+                                                                       @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                       @required_parts[32m=[0m[][32m>[0m[32m>[0m,
+                                                                   @memo[32m=[0m[1;36mnil[0m,
+                                                                   @right[32m=[0m
+                                                                    [32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b54d0[0m
+                                                                     @left[32m=[0m
+                                                                      [32m#<ActionDispatch::Journey::Nodes::Literal:0x000055c0915b5a98[0m
+                                                                       @left[32m=[0m[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                       @memo[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Route:0x000055c0915b3cc0[0m
+                                                                         @app[32m=[0m
+                                                                          [32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b4dc8[0m @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                         @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                         @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m,
+                                                                         @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m},
+                                                                         @name[32m=[0m[31m[1;31m"[0m[31mauthn_whoami[1;31m"[0m[31m[0m,
+                                                                         @parts[32m=[0m[[33m:format[0m],
+                                                                         @path[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b4c88[0m
+                                                                           @anchored[32m=[0m[1;36mtrue[0m,
+                                                                           @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                           @offsets[32m=[0m[[1;34m0[0m, [1;34m0[0m],
+                                                                           @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                           @re[32m=[0m[35m[1;35m/[0m[35m[1;35m\A[0m[35m[1;35m\/[0m[35mauthn[1;35m\/[0m[35mwhoami(?:[1;35m\.[0m[35m([^[1;35m\/[0m[35m.?]+))?[1;35m\Z[0m[35m[1;35m/[0m[35m[0m,
+                                                                           @required_names[32m=[0m[],
+                                                                           @requirements[32m=[0m{},
+                                                                           @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                           @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m[32m>[0m,
+                                                                         @path_formatter[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Format:0x000055c0915b36d0[0m
+                                                                           @children[32m=[0m[[1;34m4[0m],
+                                                                           @parameters[32m=[0m[],
+                                                                           @parts[32m=[0m
+                                                                            [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                             [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                             [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                             [31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m,
+                                                                             [32m#<ActionDispatch::Journey::Format:0x000055c0915b3950[0m
+                                                                              @children[32m=[0m[],
+                                                                              @parameters[32m=[0m[[1;34m1[0m],
+                                                                              @parts[32m=[0m
+                                                                               [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                                [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                                 name[32m=[0m[33m:format[0m,
+                                                                                 escaper[32m=[0m
+                                                                                  [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                         @precedence[32m=[0m[1;34m1[0m,
+                                                                         @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                         @required_parts[32m=[0m[][32m>[0m[32m>[0m,
+                                                                     @memo[32m=[0m[1;36mnil[0m,
+                                                                     @right[32m=[0m
+                                                                      [32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5520[0m
+                                                                       @left[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Nodes::Slash:0x000055c0915b59d0[0m
+                                                                         @left[32m=[0m[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                         @memo[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Route:0x000055c0915b3cc0[0m
+                                                                           @app[32m=[0m
+                                                                            [32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b4dc8[0m
+                                                                             @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                           @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                           @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m,
+                                                                           @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m},
+                                                                           @name[32m=[0m[31m[1;31m"[0m[31mauthn_whoami[1;31m"[0m[31m[0m,
+                                                                           @parts[32m=[0m[[33m:format[0m],
+                                                                           @path[32m=[0m
+                                                                            [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b4c88[0m
+                                                                             @anchored[32m=[0m[1;36mtrue[0m,
+                                                                             @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                             @offsets[32m=[0m[[1;34m0[0m, [1;34m0[0m],
+                                                                             @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                             @re[32m=[0m[35m[1;35m/[0m[35m[1;35m\A[0m[35m[1;35m\/[0m[35mauthn[1;35m\/[0m[35mwhoami(?:[1;35m\.[0m[35m([^[1;35m\/[0m[35m.?]+))?[1;35m\Z[0m[35m[1;35m/[0m[35m[0m,
+                                                                             @required_names[32m=[0m[],
+                                                                             @requirements[32m=[0m{},
+                                                                             @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                             @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m[32m>[0m,
+                                                                           @path_formatter[32m=[0m
+                                                                            [32m#<ActionDispatch::Journey::Format:0x000055c0915b36d0[0m
+                                                                             @children[32m=[0m[[1;34m4[0m],
+                                                                             @parameters[32m=[0m[],
+                                                                             @parts[32m=[0m
+                                                                              [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                               [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                               [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                               [31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m,
+                                                                               [32m#<ActionDispatch::Journey::Format:0x000055c0915b3950[0m
+                                                                                @children[32m=[0m[],
+                                                                                @parameters[32m=[0m[[1;34m1[0m],
+                                                                                @parts[32m=[0m
+                                                                                 [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                                  [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                                   name[32m=[0m[33m:format[0m,
+                                                                                   escaper[32m=[0m
+                                                                                    [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                           @precedence[32m=[0m[1;34m1[0m,
+                                                                           @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                           @required_parts[32m=[0m[][32m>[0m[32m>[0m,
+                                                                       @memo[32m=[0m[1;36mnil[0m,
+                                                                       @right[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5570[0m
+                                                                         @left[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Nodes::Literal:0x000055c0915b58b8[0m
+                                                                           @left[32m=[0m[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m,
+                                                                           @memo[32m=[0m
+                                                                            [32m#<ActionDispatch::Journey::Route:0x000055c0915b3cc0[0m
+                                                                             @app[32m=[0m
+                                                                              [32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b4dc8[0m
+                                                                               @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                             @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                             @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m,
+                                                                             @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m},
+                                                                             @name[32m=[0m[31m[1;31m"[0m[31mauthn_whoami[1;31m"[0m[31m[0m,
+                                                                             @parts[32m=[0m[[33m:format[0m],
+                                                                             @path[32m=[0m
+                                                                              [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b4c88[0m
+                                                                               @anchored[32m=[0m[1;36mtrue[0m,
+                                                                               @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                               @offsets[32m=[0m[[1;34m0[0m, [1;34m0[0m],
+                                                                               @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                               @re[32m=[0m[35m[1;35m/[0m[35m[1;35m\A[0m[35m[1;35m\/[0m[35mauthn[1;35m\/[0m[35mwhoami(?:[1;35m\.[0m[35m([^[1;35m\/[0m[35m.?]+))?[1;35m\Z[0m[35m[1;35m/[0m[35m[0m,
+                                                                               @required_names[32m=[0m[],
+                                                                               @requirements[32m=[0m{},
+                                                                               @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                               @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m[32m>[0m,
+                                                                             @path_formatter[32m=[0m
+                                                                              [32m#<ActionDispatch::Journey::Format:0x000055c0915b36d0[0m
+                                                                               @children[32m=[0m[[1;34m4[0m],
+                                                                               @parameters[32m=[0m[],
+                                                                               @parts[32m=[0m
+                                                                                [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                                 [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                                 [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                                 [31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m,
+                                                                                 [32m#<ActionDispatch::Journey::Format:0x000055c0915b3950[0m
+                                                                                  @children[32m=[0m[],
+                                                                                  @parameters[32m=[0m[[1;34m1[0m],
+                                                                                  @parts[32m=[0m
+                                                                                   [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                                    [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                                     name[32m=[0m[33m:format[0m,
+                                                                                     escaper[32m=[0m
+                                                                                      [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                             @precedence[32m=[0m[1;34m1[0m,
+                                                                             @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                             @required_parts[32m=[0m[][32m>[0m[32m>[0m,
+                                                                         @memo[32m=[0m[1;36mnil[0m,
+                                                                         @right[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Nodes::Group:0x000055c0915b5610[0m
+                                                                           @left[32m=[0m
+                                                                            [32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5660[0m
+                                                                             @left[32m=[0m
+                                                                              [32m#<ActionDispatch::Journey::Nodes::Dot:0x000055c0915b57c8[0m
+                                                                               @left[32m=[0m[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                               @memo[32m=[0m
+                                                                                [32m#<ActionDispatch::Journey::Route:0x000055c0915b3cc0[0m
+                                                                                 @app[32m=[0m
+                                                                                  [32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b4dc8[0m
+                                                                                   @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                                 @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                                 @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m,
+                                                                                 @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m},
+                                                                                 @name[32m=[0m[31m[1;31m"[0m[31mauthn_whoami[1;31m"[0m[31m[0m,
+                                                                                 @parts[32m=[0m[[33m:format[0m],
+                                                                                 @path[32m=[0m
+                                                                                  [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b4c88[0m
+                                                                                   @anchored[32m=[0m[1;36mtrue[0m,
+                                                                                   @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                                   @offsets[32m=[0m[[1;34m0[0m, [1;34m0[0m],
+                                                                                   @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                                   @re[32m=[0m[35m[1;35m/[0m[35m[1;35m\A[0m[35m[1;35m\/[0m[35mauthn[1;35m\/[0m[35mwhoami(?:[1;35m\.[0m[35m([^[1;35m\/[0m[35m.?]+))?[1;35m\Z[0m[35m[1;35m/[0m[35m[0m,
+                                                                                   @required_names[32m=[0m[],
+                                                                                   @requirements[32m=[0m{},
+                                                                                   @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                                   @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m[32m>[0m,
+                                                                                 @path_formatter[32m=[0m
+                                                                                  [32m#<ActionDispatch::Journey::Format:0x000055c0915b36d0[0m
+                                                                                   @children[32m=[0m[[1;34m4[0m],
+                                                                                   @parameters[32m=[0m[],
+                                                                                   @parts[32m=[0m
+                                                                                    [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                                     [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                                     [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                                     [31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m,
+                                                                                     [32m#<ActionDispatch::Journey::Format:0x000055c0915b3950[0m
+                                                                                      @children[32m=[0m[],
+                                                                                      @parameters[32m=[0m[[1;34m1[0m],
+                                                                                      @parts[32m=[0m
+                                                                                       [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                                        [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                                         name[32m=[0m[33m:format[0m,
+                                                                                         escaper[32m=[0m
+                                                                                          [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                                 @precedence[32m=[0m[1;34m1[0m,
+                                                                                 @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                                 @required_parts[32m=[0m[][32m>[0m[32m>[0m,
+                                                                             @memo[32m=[0m[1;36mnil[0m,
+                                                                             @right[32m=[0m
+                                                                              [32m#<ActionDispatch::Journey::Nodes::Symbol:0x000055c0915b5728[0m
+                                                                               @left[32m=[0m[31m[1;31m"[0m[31m:format[1;31m"[0m[31m[0m,
+                                                                               @memo[32m=[0m
+                                                                                [32m#<ActionDispatch::Journey::Route:0x000055c0915b3cc0[0m
+                                                                                 @app[32m=[0m
+                                                                                  [32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b4dc8[0m
+                                                                                   @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                                 @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                                 @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m,
+                                                                                 @defaults[32m=[0m{[33m:format[0m=>[33m:json[0m, [33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m},
+                                                                                 @name[32m=[0m[31m[1;31m"[0m[31mauthn_whoami[1;31m"[0m[31m[0m,
+                                                                                 @parts[32m=[0m[[33m:format[0m],
+                                                                                 @path[32m=[0m
+                                                                                  [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b4c88[0m
+                                                                                   @anchored[32m=[0m[1;36mtrue[0m,
+                                                                                   @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                                   @offsets[32m=[0m[[1;34m0[0m, [1;34m0[0m],
+                                                                                   @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                                   @re[32m=[0m[35m[1;35m/[0m[35m[1;35m\A[0m[35m[1;35m\/[0m[35mauthn[1;35m\/[0m[35mwhoami(?:[1;35m\.[0m[35m([^[1;35m\/[0m[35m.?]+))?[1;35m\Z[0m[35m[1;35m/[0m[35m[0m,
+                                                                                   @required_names[32m=[0m[],
+                                                                                   @requirements[32m=[0m{},
+                                                                                   @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                                   @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b5480[0m ...[32m>[0m[32m>[0m,
+                                                                                 @path_formatter[32m=[0m
+                                                                                  [32m#<ActionDispatch::Journey::Format:0x000055c0915b36d0[0m
+                                                                                   @children[32m=[0m[[1;34m4[0m],
+                                                                                   @parameters[32m=[0m[],
+                                                                                   @parts[32m=[0m
+                                                                                    [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                                     [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                                     [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                                     [31m[1;31m"[0m[31mwhoami[1;31m"[0m[31m[0m,
+                                                                                     [32m#<ActionDispatch::Journey::Format:0x000055c0915b3950[0m
+                                                                                      @children[32m=[0m[],
+                                                                                      @parameters[32m=[0m[[1;34m1[0m],
+                                                                                      @parts[32m=[0m
+                                                                                       [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                                        [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                                         name[32m=[0m[33m:format[0m,
+                                                                                         escaper[32m=[0m
+                                                                                          [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                                 @precedence[32m=[0m[1;34m1[0m,
+                                                                                 @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                                 @required_parts[32m=[0m[][32m>[0m,
+                                                                               @regexp[32m=[0m[35m[1;35m/[0m[35m[^[1;35m\.[0m[35m[1;35m\/[0m[35m[1;35m\?[0m[35m]+[1;35m/[0m[35m[0m[32m>[0m[32m>[0m,
+                                                                           @memo[32m=[0m[1;36mnil[0m[32m>[0m[32m>[0m[32m>[0m[32m>[0m[32m>[0m,
+                                                                  [32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0ea8[0m
+                                                                   @left[32m=[0m
+                                                                    [32m#<ActionDispatch::Journey::Nodes::Slash:0x000055c0915b16f0[0m
+                                                                     @left[32m=[0m[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                     @memo[32m=[0m
+                                                                      [32m#<ActionDispatch::Journey::Route:0x000055c0915a7c18[0m
+                                                                       @app[32m=[0m[32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b0778[0m @defaults[32m=[0m{[33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                       @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                       @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0ea8[0m ...[32m>[0m,
+                                                                       @defaults[32m=[0m{[33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m},
+                                                                       @name[32m=[0m[31m[1;31m"[0m[31mauthn_checkme[1;31m"[0m[31m[0m,
+                                                                       @parts[32m=[0m[[33m:format[0m],
+                                                                       @path[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b0660[0m
+                                                                         @anchored[32m=[0m[1;36mtrue[0m,
+                                                                         @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                         @offsets[32m=[0m[1;36mnil[0m,
+                                                                         @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                         @re[32m=[0m[1;36mnil[0m,
+                                                                         @required_names[32m=[0m[],
+                                                                         @requirements[32m=[0m{},
+                                                                         @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                         @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0ea8[0m ...[32m>[0m[32m>[0m,
+                                                                       @path_formatter[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Format:0x000055c0915a7678[0m
+                                                                         @children[32m=[0m[[1;34m4[0m],
+                                                                         @parameters[32m=[0m[],
+                                                                         @parts[32m=[0m
+                                                                          [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                           [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                           [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                           [31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m,
+                                                                           [32m#<ActionDispatch::Journey::Format:0x000055c0915a7808[0m
+                                                                            @children[32m=[0m[],
+                                                                            @parameters[32m=[0m[[1;34m1[0m],
+                                                                            @parts[32m=[0m
+                                                                             [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                              [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                               name[32m=[0m[33m:format[0m,
+                                                                               escaper[32m=[0m
+                                                                                [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                       @precedence[32m=[0m[1;34m2[0m,
+                                                                       @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                       @required_parts[32m=[0m[][32m>[0m[32m>[0m,
+                                                                   @memo[32m=[0m[1;36mnil[0m,
+                                                                   @right[32m=[0m
+                                                                    [32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0ef8[0m
+                                                                     @left[32m=[0m
+                                                                      [32m#<ActionDispatch::Journey::Nodes::Literal:0x000055c0915b15b0[0m
+                                                                       @left[32m=[0m[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                       @memo[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Route:0x000055c0915a7c18[0m
+                                                                         @app[32m=[0m[32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b0778[0m @defaults[32m=[0m{[33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                         @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                         @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0ea8[0m ...[32m>[0m,
+                                                                         @defaults[32m=[0m{[33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m},
+                                                                         @name[32m=[0m[31m[1;31m"[0m[31mauthn_checkme[1;31m"[0m[31m[0m,
+                                                                         @parts[32m=[0m[[33m:format[0m],
+                                                                         @path[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Path::Pattern:0x000055c0915b0660[0m
+                                                                           @anchored[32m=[0m[1;36mtrue[0m,
+                                                                           @names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                           @offsets[32m=[0m[1;36mnil[0m,
+                                                                           @optional_names[32m=[0m[[31m[1;31m"[0m[31mformat[1;31m"[0m[31m[0m],
+                                                                           @re[32m=[0m[1;36mnil[0m,
+                                                                           @required_names[32m=[0m[],
+                                                                           @requirements[32m=[0m{},
+                                                                           @separators[32m=[0m[31m[1;31m"[0m[31m/.?[1;31m"[0m[31m[0m,
+                                                                           @spec[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0ea8[0m ...[32m>[0m[32m>[0m,
+                                                                         @path_formatter[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Format:0x000055c0915a7678[0m
+                                                                           @children[32m=[0m[[1;34m4[0m],
+                                                                           @parameters[32m=[0m[],
+                                                                           @parts[32m=[0m
+                                                                            [[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                             [31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m,
+                                                                             [31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                             [31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m,
+                                                                             [32m#<ActionDispatch::Journey::Format:0x000055c0915a7808[0m
+                                                                              @children[32m=[0m[],
+                                                                              @parameters[32m=[0m[[1;34m1[0m],
+                                                                              @parts[32m=[0m
+                                                                               [[31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m,
+                                                                                [32m#<struct ActionDispatch::Journey::Format::Parameter[0m
+                                                                                 name[32m=[0m[33m:format[0m,
+                                                                                 escaper[32m=[0m
+                                                                                  [32m#<Proc:0x000055c08d3985c0@/home/alfonso/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/journey/visitors.rb:7 (lambda)>[0m[32m>[0m][32m>[0m][32m>[0m,
+                                                                         @precedence[32m=[0m[1;34m2[0m,
+                                                                         @required_defaults[32m=[0m[1;36mnil[0m,
+                                                                         @required_parts[32m=[0m[][32m>[0m[32m>[0m,
+                                                                     @memo[32m=[0m[1;36mnil[0m,
+                                                                     @right[32m=[0m
+                                                                      [32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0f48[0m
+                                                                       @left[32m=[0m
+                                                                        [32m#<ActionDispatch::Journey::Nodes::Slash:0x000055c0915b14c0[0m
+                                                                         @left[32m=[0m[31m[1;31m"[0m[31m/[1;31m"[0m[31m[0m,
+                                                                         @memo[32m=[0m
+                                                                          [32m#<ActionDispatch::Journey::Route:0x000055c0915a7c18[0m
+                                                                           @app[32m=[0m[32m#<ActionDispatch::Routing::RouteSet::Dispatcher:0x000055c0915b0778[0m @defaults[32m=[0m{[33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m}[32m>[0m,
+                                                                           @constraints[32m=[0m{[33m:required_defaults[0m=>[[33m:controller[0m, [33m:action[0m], [33m:request_method[0m=>[35m[1;35m/[0m[35m^GET$[1;35m/[0m[35m[0m},
+                                                                           @decorated_ast[32m=[0m[32m#<ActionDispatch::Journey::Nodes::Cat:0x000055c0915b0ea8[0m ...[32m>[0m,
+                                                                           @defaults[32m=[0m{[33m:controller[0m=>[31m[1;31m"[0m[31mauthn[1;31m"[0m[31m[0m, [33m:action[0m=>[31m[1;31m"[0m[31mcheckme[1;31m"[0m[31m[0m},

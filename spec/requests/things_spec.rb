@@ -85,6 +85,8 @@ RSpec.describe "Things", type: :request do
     it "get does not include notes" do
       jget thing_path(thing)
       expect(response).to have_http_status(:ok)
+      pp parsed_body
+      # byebug
       payload=parsed_body
       expect(payload).to include("id"=>thing.id)
       expect(payload).to include("name"=>thing.name)

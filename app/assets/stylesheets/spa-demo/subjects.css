@@ -11,3 +11,16 @@ sd-thing-editor form {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+form.business-form .id,
+div.business-list .id,
+form.service-form .id,
+div.service-list .id {
+  display: none;
+}
+
+sd-service-editor form,
+sd-business-editor form {
+  padding-left: 15px;
+  padding-right: 15px;
+}

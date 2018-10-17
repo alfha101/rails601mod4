@@ -6,6 +6,18 @@ Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
 
   scope :api, defaults: {format: :json}  do 
+    resources :services, except: [:new, :edit] do
+      post "business_services", controller: :business_services, action: :create
+      # get "business_services", controller: :business_services, action: :business_services
+      get "business_services", controller: :business_services, action: :service_businesses
+      get "linkable_businesses", controller: :business_services, action: :linkable_businesses
+    end
+    # primary management of business_services is under businesses, 
+    # selective methods of business_services is below services. 
+    resources :businesses, except: [:new, :edit] do
+      resources :business_services, only: [:index, :create, :update, :destroy]
+    end
+    
     resources :foos, except: [:new, :edit]
     resources :bars, except: [:new, :edit]
     resources :images, except: [:new, :edit] do

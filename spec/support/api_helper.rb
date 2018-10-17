@@ -84,7 +84,12 @@ RSpec.shared_examples "resource index" do |model|
   let(:payload) { parsed_body }
 
   it "returns all #{model} instances" do
-    jget send("#{model}s_path"), {}, {"Accept"=>"application/json"}
+    # jget send("#{model}s_path"), {}, {"Accept"=>"application/json"}
+    if  "#{model}" == "business"
+      jget send("#{model}es_path"), {}, {"Accept"=>"application/json"}
+    else
+      jget send("#{model}s_path"), {}, {"Accept"=>"application/json"}      
+    end
     expect(response).to have_http_status(:ok)
     expect(response.content_type).to eq("application/json")
 
@@ -124,7 +129,12 @@ RSpec.shared_examples "create resource" do |model|
   let(:resource_id)    { payload["id"] }
 
   it "can create valid #{model}" do
-    jpost send("#{model}s_path"), resource_state
+    # jpost send("#{model}s_path"), resource_state
+    if "#{model}" == "business"
+      jpost send("#{model}es_path"), resource_state
+    else
+      jpost send("#{model}s_path"), resource_state 
+    end     
     expect(response).to have_http_status(:created)
     expect(response.content_type).to eq("application/json") 
 
@@ -140,7 +150,12 @@ end
 
 RSpec.shared_examples "modifiable resource" do |model|
   let(:resource) do 
-    jpost send("#{model}s_path"), FactoryGirl.attributes_for(model)
+    # jpost send("#{model}s_path"), FactoryGirl.attributes_for(model)
+    if "#{model}" == "business"
+      jpost send("#{model}es_path"), FactoryGirl.attributes_for(model)
+    else
+      jpost send("#{model}s_path"),  FactoryGirl.attributes_for(model)      
+    end
     expect(response).to have_http_status(:created)
     parsed_body
   end

@@ -45,3 +45,15 @@
 //= require spa-demo/subjects/things/things_authz.service
 //= require spa-demo/subjects/things/things_authz.directive
 //= require spa-demo/subjects/things/things.component
+
+//= require spa-demo/subjects/services/services.service
+//= require spa-demo/subjects/services/services_authz.service
+//= require spa-demo/subjects/services/service_businesses.service
+//= require spa-demo/subjects/services/service_linkable_businesses.service
+//= require spa-demo/subjects/services/services.component
+//= require spa-demo/subjects/services/services_authz.directive
+//= require spa-demo/subjects/businesses/businesses.service
+//= require spa-demo/subjects/businesses/business_services.service
+//= require spa-demo/subjects/businesses/businesses_authz.service
+//= require spa-demo/subjects/businesses/businesses_authz.directive
+//= require spa-demo/subjects/businesses/businesses.component

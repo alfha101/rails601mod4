@@ -8,6 +8,7 @@ class ImagesController < ApplicationController
   def index
     authorize Image
     @images = policy_scope(Image.all)
+    pp @images.map{|r|r.attributes}
     @images = ImagePolicy.merge(@images)
   end
 
@@ -26,7 +27,7 @@ class ImagesController < ApplicationController
       if @image.save
         role=current_user.add_role(Role::ORGANIZER, @image)
         @image.user_roles << role.role_name
-        role.save!
+      role.save!
         render :show, status: :created, location: @image
       else
         render json: {errors:@image.errors.messages}, status: :unprocessable_entity

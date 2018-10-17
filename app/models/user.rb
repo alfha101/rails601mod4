@@ -32,4 +32,8 @@ class User < ActiveRecord::Base
   def is_admin?
      roles.where(:role_name=>Role::ADMIN).exists?
   end
+  
+  def is_member?
+    roles.where(:role_name=>Role::MEMBER).exists?
+ end
 end

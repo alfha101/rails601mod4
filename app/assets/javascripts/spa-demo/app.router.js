@@ -25,6 +25,14 @@
       url: "/authn",
       templateUrl: APP_CONFIG.authn_page_html
     })
+    .state("services",{
+      url: "/services/:id",
+      templateUrl: APP_CONFIG.services_page_html
+    })
+    .state("businesses",{
+      url: "/businesses/:id",
+      templateUrl: APP_CONFIG.businesses_page_html
+    })
     .state("images",{
       url: "/images/:id",
       templateUrl: APP_CONFIG.images_page_html

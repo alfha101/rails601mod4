@@ -1,0 +1,117 @@
+SELECT version();
+SELECT current_date;
+SELECT 2 + 2;
+\h
+SELECT *
+FROM pg_tables t
+WHERE t.tableowner = current_user;
+\dt *.*
+\dt
+\l
+\c myapp_development
+\l
+\dt
+\c mydb
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+\dt
+\d company
+ALTER TABLE company
+ADD COLUMN JOIN_DATE DATE;
+\d company
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (1, 'Paul', 32, 'California', 20000.00,'2001-07-13');
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,JOIN_DATE) VALUES (2, 'Allen', 25, 'Texas', '2007-12-13');
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (3, 'Teddy', 23, 'Norway', 20000.00, DEFAULT );
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00, '2007-12-13' ), (5, 'David', 27, 'Texas', 85000.00, '2007-12-13');
+SELECT * FROM COMPANY;
+SELECT ID, NAME, SALARY FROM COMPANY ;
+SELECT * FROM COMPANY WHERE SALARY = 10000;
+SELECT * FROM COMPANY WHERE SALARY >= 30000;
+SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
+SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;
+SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
+SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';
+SELECT * FROM COMPANY WHERE AGE IN ( 25, 27 );
+SELECT * FROM COMPANY WHERE AGE BETWEEN 25 AND 27;
+SELECT * FROM COMPANY
+        WHERE AGE > (SELECT AGE FROM COMPANY WHERE SALARY > 65000);
+SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;
+UPDATE COMPANY SET SALARY = 15000 WHERE ID = 3;
+SELECT * FROM COMPANY;
+DELETE FROM COMPANY WHERE ID = 2;
+SELECT * FROM COMPANY;
+SELECT * FROM COMPANY WHERE AGE::text LIKE '2%';
+SELECT * FROM COMPANY LIMIT 4;
+SELECT * FROM COMPANY LIMIT 3 OFFSET 2;
+SELECT * FROM COMPANY ORDER BY AGE ASC;
+INSERT INTO COMPANY VALUES (8, 'Paul', 24, 'Houston', 20000.00);
+INSERT INTO COMPANY VALUES (9, 'James', 44, 'Norway', 5000.00);
+INSERT INTO COMPANY VALUES (10, 'James', 45, 'Texas', 5000.00);
+SELECT * FROM COMAPNY;
+SELECT * FROM COMPANY;
+SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME ORDER BY NAME;
+\q
+\l
+\l
+\q
+\l
+dropdb yourdb
+\l
+dropdb yourdb;
+\q
+\l
+\q
+\q
+\q
+\d
+\l
+\c capstone_demoapp_development
+\d
+\q
+\d
+\d cities
+\q
+\d
+\q
+\d
+\d cities
+\q
+\d
+drop cities;
+drop table cities;
+\d
+\q
+\d
+\q
+\d
+\q
+\q
+\d
+\d roles
+\d users
+\q
+\d
+\d images
+\d things
+\q
+\d
+select * from roles;
+select * from things;
+select * from users;
+\q
+select * from roles;
+select users
+\d
+select * from users;
+select * from users;
+select * from users;
+select * from roles where user="carol";
+select * from roles;
+select * from users;
+\d users
+\s roles

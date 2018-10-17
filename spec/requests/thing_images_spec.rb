@@ -22,7 +22,7 @@ RSpec.describe "ThingImages", type: :request do
         #get ThingImages for Thing and verify associated with Image
         jget thing_thing_images_path(thing["id"])
         expect(response).to have_http_status(:ok)
-        #puts response.body
+        puts response.body
         payload=parsed_body
         expect(payload.size).to eq(1)
         expect(payload[0]).to include("image_id"=>image["id"])
@@ -43,7 +43,7 @@ RSpec.describe "ThingImages", type: :request do
   shared_examples "can get links" do
     it "can get links for Thing" do
       jget thing_thing_images_path(linked_thing_id)
-      #pp parsed_body
+      # pp parsed_body
       expect(response).to have_http_status(:ok)
       expect(parsed_body.size).to eq(linked_image_ids.count)
       expect(parsed_body[0]).to include("image_caption")
@@ -51,7 +51,7 @@ RSpec.describe "ThingImages", type: :request do
     end
     it "can get links for Image" do
       jget image_thing_images_path(linked_image_id)
-      #pp parsed_body
+      # pp parsed_body
       expect(response).to have_http_status(:ok)
       expect(parsed_body.size).to eq(1)
       expect(parsed_body[0]).to_not include("image_caption")

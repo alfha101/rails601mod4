@@ -54,6 +54,7 @@ namespace :ptourist do
     image=Image.create(:creator_id=>organizer.id,:caption=>img[:caption])
     organizer.add_role(Role::ORGANIZER, image).save
   end
+  
   def create_thing thing, organizer, members, images
     thing=Thing.create!(thing)
     organizer.add_role(Role::ORGANIZER, thing).save

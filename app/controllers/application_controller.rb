@@ -36,6 +36,7 @@ class ApplicationController < ActionController::API
     end 
 
     def user_not_authorized(exception)
+      # pundit user is essentially current user from devise. 
       user=pundit_user ? pundit_user.uid : "Anonymous user"
       payload = {
         errors: {full_messages:["#{user} not authorized to #{exception.query}"]}

@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  #Rails.logger = Logger.new(STDOUT)
+  # Rails.logger = Logger.new(STDOUT)
+
+  # config.logger = Logger.new("/home/alfonso/Documents/capstone2/module4/Application Log")
+  # config.logger.level = Logger::ERROR
 
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that

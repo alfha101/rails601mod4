@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130051702) do
+ActiveRecord::Schema.define(version: 20180827183012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "business_services", force: :cascade do |t|
+    t.integer  "service_id",              null: false
+    t.integer  "business_id",             null: false
+    t.integer  "priority",    default: 5, null: false
+    t.integer  "creator_id",              null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "business_services", ["business_id"], name: "index_business_services_on_business_id", using: :btree
+  add_index "business_services", ["service_id", "business_id"], name: "index_business_services_on_service_id_and_business_id", unique: true, using: :btree
+  add_index "business_services", ["service_id"], name: "index_business_services_on_service_id", using: :btree
+
+  create_table "businesses", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.text     "description"
+    t.text     "notes"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "businesses", ["name"], name: "index_businesses_on_name", using: :btree
 
   create_table "foos", force: :cascade do |t|
     t.string   "name",       null: false
@@ -27,9 +50,12 @@ ActiveRecord::Schema.define(version: 20170130051702) do
     t.integer  "creator_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float    "lng"
+    t.float    "lat"
   end
 
   add_index "images", ["creator_id"], name: "index_images_on_creator_id", using: :btree
+  add_index "images", ["lng", "lat"], name: "index_images_on_lng_and_lat", using: :btree
 
   create_table "roles", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -44,6 +70,17 @@ ActiveRecord::Schema.define(version: 20170130051702) do
   add_index "roles", ["mname", "mid"], name: "index_roles_on_mname_and_mid", using: :btree
   add_index "roles", ["mname"], name: "index_roles_on_mname", using: :btree
   add_index "roles", ["user_id"], name: "index_roles_on_user_id", using: :btree
+
+  create_table "services", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.text     "description"
+    t.text     "notes"
+    t.integer  "creator_id",  null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "services", ["creator_id"], name: "index_services_on_creator_id", using: :btree
 
   create_table "thing_images", force: :cascade do |t|
     t.integer  "image_id",               null: false
@@ -97,6 +134,8 @@ ActiveRecord::Schema.define(version: 20170130051702) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
 
+  add_foreign_key "business_services", "businesses"
+  add_foreign_key "business_services", "services"
   add_foreign_key "roles", "users"
   add_foreign_key "thing_images", "images"
   add_foreign_key "thing_images", "things"

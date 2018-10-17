@@ -1,0 +1,14 @@
+class CreateServices < ActiveRecord::Migration
+  def change
+    create_table :services do |t|
+      t.string :name, {null:false}
+      t.text :description
+      t.text :notes
+   #   t.references :business, index: true, foreign_key: true
+      t.integer :creator_id, {null:false}
+
+      t.timestamps null: false
+    end
+    add_index :services, :creator_id
+  end
+end

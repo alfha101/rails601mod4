@@ -1,0 +1,13 @@
+class CreateBusinesses < ActiveRecord::Migration
+  def change
+    create_table :businesses do |t|
+      t.string :name, {null:false}
+      t.text :description
+      t.text :notes
+      t.integer :sector
+
+      t.timestamps null: false
+    end
+    add_index :businesses, :name
+  end
+end

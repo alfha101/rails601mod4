@@ -23,6 +23,7 @@ RSpec.describe ThingImage, type: :model do
       thing.thing_images.each do |ti|
         expect(ti.image.things.first).to eql(thing) #same instance
       end
+      byebug
     end
 
     it "build images using factory" do

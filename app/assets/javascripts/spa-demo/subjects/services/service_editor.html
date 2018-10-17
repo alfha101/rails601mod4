@@ -1,0 +1,108 @@
+<form class="service-form row" name="serviceform">
+    <span class="service_id id">{{$ctrl.item.id}}</span>
+    <span class="invalid">{{$ctrl.item.errors.full_messages}}</span>
+  
+    <div class="service-name row col-lg-12">
+        <!-- ng-show="serviceform.$valid"> -->
+      <label class="col-xs-3">Name:</label>
+      <input class="col-xs-9"
+             name="service-name" 
+             ng-model="$ctrl.item.name" 
+             ng-readonly="!$ctrl.authz.canUpdate"
+             required="required"
+             maxlength="80"
+             pattern=".{3,}" title="3 character minimum for Name"/>
+      <span class="invalid">{{$ctrl.item.errors.name}}</span>
+    </div>
+ 
+    <div class="service-desc row col-lg-12"
+         ng-show="serviceform.$valid">
+      <label class="col-xs-3">Description:</label>
+      <textarea class="col-xs-9"
+             name="service-desc" 
+             ng-model="$ctrl.item.description" 
+             ng-readonly="!$ctrl.authz.canUpdate"
+             type="text"
+             size="80"
+             maxlength="4000"/>
+      <span class="invalid">{{$ctrl.item.errors.description}}</span>
+    </div>
+  
+    <div class="service-notes row col-lg-12"
+         ng-show="$ctrl.authz.canGetDetails && serviceform.$valid">
+      <label class="col-xs-3">Notes:</label>
+      <textarea class="col-xs-9"
+             name="service-notes" 
+             ng-model="$ctrl.item.notes" 
+             ng-readonly="!$ctrl.authz.canUpdate"
+             type="text"
+             size="80"
+             maxlength="4000"/>
+      <span class="invalid">{{$ctrl.item.errors.notes}}</span>
+    </div>    
+
+
+    <div class="service-businesses row col-lg-12"
+         ng-show="$ctrl.authz.canGetDetails && serviceform.$valid">
+      <label class="col-xs-3">Related Businesses:</label>
+      <ul class="service-businesses col-xs-9">
+        <li ng-repeat="ti in $ctrl.businesses | orderBy:'priority'">
+          <a data-ui-sref="businesses({id:ti.business_id})">
+            <span class="id business_id">{{ti.business_id}}</span>
+            {{ti.business_name}}</a>
+        </li>
+      </ul>
+      <span class="invalid">{{$ctrl.item.errors.business_services}}</span>
+    </div>
+  
+    <div class="linkable-businesses row col-lg-12"
+         ng-show="$ctrl.linkable_businesses.length>0 &&
+                  $ctrl.authz.authenticated">
+      <label class="col-xs-3">Linkable Businesses:</label>
+      <div class="link-businesses" class="col-xs-9">
+        <select name="linkable-businesses" 
+                ng-model="$ctrl.selected_linkables"               
+                multiple>
+          <option ng-repeat="business in $ctrl.linkable_businesses | orderBy:'name'"
+                  value="{{business.id}}">{{business.name}}</option>
+        </select>
+      </div>
+      <span class="invalid">{{$ctrl.item.errors.linkable_businesses}}</span>
+    </div>
+  
+    <div class="service-controls">
+      <span ng-show="$ctrl.authz.authenticated">
+          <button ng-show="!$ctrl.item.id && $ctrl.authz.canCreate"
+                name="service-create"
+                ng-disabled="serviceform.$invalid"
+                type="submit"
+                ng-click="$ctrl.create()">Create Service</button>
+
+
+        <span ng-show="$ctrl.item.id">
+          <button name="service-update"
+                  type="submit"
+                  ng-show="$ctrl.authz.canUpdate" 
+                  ng-disabled="!serviceform.$dirty"
+                  ng-click="$ctrl.update()">Update Service</button>
+                  
+          <button name="service-update"
+                  type="submit"
+                  ng-show="$ctrl.authz.canUpdate" 
+                  ng-disabled="$ctrl.selected_linkables.length==0"
+                  ng-click="$ctrl.linkBusinesses()">Link to Businesses</button>
+
+          <button name="service-delete"
+                  type="submit"
+                  ng-show="$ctrl.authz.canDelete" 
+                  ng-click="$ctrl.remove()">Delete Service</button>
+        </span>
+      </span>
+      <button name="service-clear"
+              type="submit"
+              ng-show="$ctrl.item.id || serviceform.$dirty"
+              ng-click="$ctrl.clear()">Clear Service</button>
+    </div>
+  
+  </form>
+  

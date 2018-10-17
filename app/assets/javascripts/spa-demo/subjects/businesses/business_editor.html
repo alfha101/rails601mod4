@@ -1,0 +1,116 @@
+<form class="business-form row" name="businessform">
+    <span class="business_id id">{{$ctrl.item.id}}</span>
+    <span class="invalid">{{$ctrl.item.errors.full_messages}}</span>
+  
+    <div class="business-name row col-lg-12">
+      <label class="col-xs-3">Name:</label>
+      <input class="col-xs-9"
+             name="business-name" 
+             data-ng-model="$ctrl.item.name" 
+             ng-readonly="!$ctrl.authz.canUpdate"
+             required="required"
+             maxlength="40"
+             pattern=".{3,}" title="3 character minimum for Name"/>
+      <span class="invalid">{{$ctrl.item.errors.name}}</span>
+    </div>
+  
+    <div class="business-desc row col-lg-12"
+         ng-show="businessform.$valid">
+      <label class="col-xs-3">Description:</label>
+      <textarea class="col-xs-9"
+             name="business-desc" 
+             ng-model="$ctrl.item.description" 
+             ng-readonly="!$ctrl.authz.canUpdate"
+             type="text"
+             size="80"
+             maxlength="4000"/>
+      <span class="invalid">{{$ctrl.item.errors.description}}</span>
+    </div>
+  
+    <div class="business-notes row col-lg-12"
+         ng-show="$ctrl.authz.canGetDetails && businessform.$valid">
+      <label class="col-xs-3">Notes:</label>
+      <textarea class="col-xs-9"
+             name="business-notes" 
+             ng-model="$ctrl.item.notes" 
+             ng-readonly="!$ctrl.authz.canUpdate"
+             type="text"
+             size="80"
+             maxlength="4000"/>
+      <span class="invalid">{{$ctrl.item.errors.notes}}</span>
+    </div>
+  
+    <div class="business-services row col-lg-12">
+      <label class="col-xs-3">Related Services:</label>
+      <ul class="business-services col-xs-9">
+        <li ng-repeat="ti in $ctrl.services | orderBy:'priority'">
+          <input type="checkbox"               
+                 name="service-delete"
+                 ng-model="ti.toRemove"
+                 ng-show="$ctrl.authz.canRemoveService"
+                 value="{{ti.id}}">
+          <div class="service-delete glyphicon glyphicon-remove"
+               ng-show="ti.toRemove"></div>
+          <input type="number"
+                 name="service-priority"
+                 min="0"
+                 max="9"
+                 ng-show="$ctrl.authz.canUpdateService && !ti.toRemove"
+                 ng-model="ti.priority">
+          <div class="glyphicon glyphicon-asterisk"
+               ng-hide="ti.originalPriority==ti.priority || ti.toRemove"></div>
+          <a data-ui-sref="services({id:ti.service_id})">
+            <img style="width: 50px"            
+               ng-src="{{ti.service_content_url}}?width=50"/>
+            <span class="id service_id">{{ti.service_id}}</span>
+            <label class="service-name"
+                   ng-show="ti.service_name">{{ti.service_name}}</label>
+            <label class="service-name"
+                   ng-hide="ti.service_name">(no name {{ti.service_id}})</label>
+          </a>
+        </li>
+      </ul>
+      <span class="invalid">{{$ctrl.item.errors.services}}</span>
+    </div>
+  
+    <div class="business-controls"
+         ng-show="$ctrl.authz.authenticated">
+      <button ng-show="!$ctrl.item.id && $ctrl.authz.canCreate"
+              name="business-create"
+              ng-disabled="businessform.$invalid"
+              type="submit"
+              ng-click="$ctrl.create()">Create Business</button>
+  
+      <div ng-show="$ctrl.item.id">
+        <span class="business-modify"
+              data-ng-hide="!$ctrl.authz.canUpdate &&
+                            !$ctrl.authz.canUpdateService &&
+                            !$ctrl.authz.canRemoveService">
+          <button name="business-update"
+                  type="submit"          
+                  ng-disabled="businessform.$invalid || !businessform.$dirty"
+                  data-ng-hide="$ctrl.haveDirtyLinks() &&
+                    (!businessform['business-name'].$dirty && 
+                     !businessform['business-desc'].$dirty && 
+                     !businessform['business-notes'].$dirty)"
+                  ng-click="$ctrl.update()">Update Business</button>
+          <button name="business-services-update"
+                  type="submit"          
+                  data-ng-show="$ctrl.haveDirtyLinks() &&
+                    (!businessform['business-name'].$dirty && 
+                     !businessform['business-desc'].$dirty && 
+                     !businessform['business-notes'].$dirty)"
+                  ng-click="$ctrl.updateServiceLinks()">Update Service Links</button>        
+        </span>
+  
+        <button name="business-delete"
+                type="submit"
+                ng-show="$ctrl.authz.canDelete" 
+                ng-click="$ctrl.remove()">Delete Business</button>
+        <button name="service-clear"
+                type="submit"
+                ng-click="$ctrl.clear()">Clear Business</button>
+      </div>
+    </div>
+  </form>
+  
