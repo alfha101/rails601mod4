@@ -10,6 +10,7 @@ class BusinessesController < ApplicationController
   def index
     authorize Business
     businesses = policy_scope(Business.all)
+    # pp businesses.map{|r|r.attributes}
     @businesses = BusinessPolicy.merge(businesses)
   end
 
@@ -29,8 +30,6 @@ class BusinessesController < ApplicationController
       if @business.save
         role=current_user.add_role(Role::ORGANIZER,@business)
         @business.user_roles << role.role_name
-        # - byebug
-        # binding.pry
         role.save!
         render :show, status: :created, location: @business
       else

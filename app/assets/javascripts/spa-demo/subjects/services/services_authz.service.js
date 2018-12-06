@@ -9,7 +9,7 @@
                                   "spa-demo.authz.BasePolicy"];
     function ServicesAuthzFactory(Authz, BasePolicy) {
       function ServicesAuthz() {
-        BasePolicy.call(this, "Image");
+        BasePolicy.call(this, "Service");
       }
   
         //start with base class prototype definitions

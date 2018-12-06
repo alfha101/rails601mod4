@@ -29,6 +29,7 @@
     </div>
   
     <div class="service-notes row col-lg-12"
+    
          ng-show="$ctrl.authz.canGetDetails && serviceform.$valid">
       <label class="col-xs-3">Notes:</label>
       <textarea class="col-xs-9"
@@ -57,7 +58,7 @@
   
     <div class="linkable-businesses row col-lg-12"
          ng-show="$ctrl.linkable_businesses.length>0 &&
-                  $ctrl.authz.authenticated">
+                  $ctrl.authz.canUpdate">
       <label class="col-xs-3">Linkable Businesses:</label>
       <div class="link-businesses" class="col-xs-9">
         <select name="linkable-businesses" 
@@ -78,7 +79,6 @@
                 type="submit"
                 ng-click="$ctrl.create()">Create Service</button>
 
-
         <span ng-show="$ctrl.item.id">
           <button name="service-update"
                   type="submit"
@@ -88,7 +88,7 @@
                   
           <button name="service-update"
                   type="submit"
-                  ng-show="$ctrl.authz.canUpdate" 
+                  ng-show="$ctrl.authz.canCreate" 
                   ng-disabled="$ctrl.selected_linkables.length==0"
                   ng-click="$ctrl.linkBusinesses()">Link to Businesses</button>
 
@@ -100,7 +100,6 @@
       </span>
       <button name="service-clear"
               type="submit"
-              ng-show="$ctrl.item.id || serviceform.$dirty"
               ng-click="$ctrl.clear()">Clear Service</button>
     </div>
   

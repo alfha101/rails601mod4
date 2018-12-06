@@ -118,6 +118,7 @@ namespace :business do
 
     originator_users.each do |user|
       user.add_role(Role::ORIGINATOR, Business).save
+      user.add_role(Role::ORIGINATOR, Service).save
     end
 
     puts "users:#{User.pluck(:name)}"
@@ -144,7 +145,7 @@ namespace :business do
       :description=>"100 acres of railroad history at the B&O Railroad Museum Service description",
       :notes=>"100 acres of railroad history at the B&O Railroad Museum Service notes"},
      {:name=>"500 acres of railroad history at the B&O Railroad Museum Service",
-      :description=>"500 acres of railroad history at the B&O Railroad Museum Service description cjkcjkcjkcksckscjskcjkjkjkjkjkjkjkjk",
+      :description=>"500 acres of railroad history at the B&O Railroad Museum Service description",
       :notes=>"Roundhouse Inside A: One-of-a-Kind Railroad Collection inside the B&O Roundhouse Service notes"}
     ]
     create_business business, organizer, members, services
@@ -195,7 +196,7 @@ namespace :business do
     organizer=get_user("carol")
     members=girl_users
     services=[
-    {:name=>"Hotel Front Entrance Service",
+    {:name=>"Holiday Inn Hotel Front Entrance Service",
      :description=>"Hotel Front Entrance Service description", 
      :notes=>"Hotel Front Entrance Service notes",
      :priority=>0
@@ -239,7 +240,7 @@ Work up a sweat in our 24-hour StayFit Gym, which features Life Fitness® cardio
     organizer=get_user("alice")
     members=girl_users
     services=[
-    {:name=>"Hotel Front Entrance Service",
+    {:name=>"Hyatt Place Atlanta Hotel Front Entrance Service",
      :description=>"Hotel Front Entrance Service description", 
      :notes=>"Hotel Front Entrance Service notes",
      :priority=>0

@@ -57,6 +57,16 @@ ActiveRecord::Schema.define(version: 20180827183012) do
   add_index "images", ["creator_id"], name: "index_images_on_creator_id", using: :btree
   add_index "images", ["lng", "lat"], name: "index_images_on_lng_and_lat", using: :btree
 
+  create_table "rol", id: false, force: :cascade do |t|
+    t.string  "role_name"
+    t.integer "mid"
+  end
+
+  create_table "rol2", id: false, force: :cascade do |t|
+    t.string  "role_name"
+    t.integer "mid"
+  end
+
   create_table "roles", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.string   "role_name",  null: false

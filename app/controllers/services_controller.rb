@@ -7,19 +7,23 @@ class ServicesController < ApplicationController
   after_action :verify_authorized
   after_action :verify_policy_scoped, only: [:index]
 
+  require 'colorize'
+
 
   def index
     authorize Service
-    @services = policy_scope(Service.all)
-    # pp @services.map{|r|r.attributes}
-    @services = ServicePolicy.merge(@services)
-
+    services = policy_scope(Service.all)
+    @services = ServicePolicy.merge(services)
   end
 
   def show
     authorize @service
-    services = policy_scope(Service.where(:id=>@service.id))
-    # pp services.map{|r|r.attributes}
+    # puts "instance_variables are:".yellow.bold
+    # pp instance_variables
+    services = ServicePolicy::Scope.new(current_user,
+                                Service.where(:id=>@service.id))
+                                .user_roles(false)
+
     @service = ServicePolicy.merge(services).first
   end
 

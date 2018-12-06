@@ -1,0 +1,617 @@
+SELECT version();
+SELECT current_date;
+SELECT 2 + 2;
+\h
+SELECT *
+FROM pg_tables t
+WHERE t.tableowner = current_user;
+\dt *.*
+\dt
+\l
+\c myapp_development
+\l
+\dt
+\c mydb
+CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+\dt
+\d company
+ALTER TABLE company
+ADD COLUMN JOIN_DATE DATE;
+\d company
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (1, 'Paul', 32, 'California', 20000.00,'2001-07-13');
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,JOIN_DATE) VALUES (2, 'Allen', 25, 'Texas', '2007-12-13');
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (3, 'Teddy', 23, 'Norway', 20000.00, DEFAULT );
+INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY,JOIN_DATE) VALUES (4, 'Mark', 25, 'Rich-Mond ', 65000.00, '2007-12-13' ), (5, 'David', 27, 'Texas', 85000.00, '2007-12-13');
+SELECT * FROM COMPANY;
+SELECT ID, NAME, SALARY FROM COMPANY ;
+SELECT * FROM COMPANY WHERE SALARY = 10000;
+SELECT * FROM COMPANY WHERE SALARY >= 30000;
+SELECT * FROM COMPANY WHERE AGE >= 25 AND SALARY >= 65000;
+SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;
+SELECT * FROM COMPANY WHERE AGE IS NOT NULL;
+SELECT * FROM COMPANY WHERE NAME LIKE 'Pa%';
+SELECT * FROM COMPANY WHERE AGE IN ( 25, 27 );
+SELECT * FROM COMPANY WHERE AGE BETWEEN 25 AND 27;
+SELECT * FROM COMPANY
+        WHERE AGE > (SELECT AGE FROM COMPANY WHERE SALARY > 65000);
+SELECT * FROM COMPANY WHERE AGE >= 25 OR SALARY >= 65000;
+UPDATE COMPANY SET SALARY = 15000 WHERE ID = 3;
+SELECT * FROM COMPANY;
+DELETE FROM COMPANY WHERE ID = 2;
+SELECT * FROM COMPANY;
+SELECT * FROM COMPANY WHERE AGE::text LIKE '2%';
+SELECT * FROM COMPANY LIMIT 4;
+SELECT * FROM COMPANY LIMIT 3 OFFSET 2;
+SELECT * FROM COMPANY ORDER BY AGE ASC;
+INSERT INTO COMPANY VALUES (8, 'Paul', 24, 'Houston', 20000.00);
+INSERT INTO COMPANY VALUES (9, 'James', 44, 'Norway', 5000.00);
+INSERT INTO COMPANY VALUES (10, 'James', 45, 'Texas', 5000.00);
+SELECT * FROM COMAPNY;
+SELECT * FROM COMPANY;
+SELECT NAME, SUM(SALARY) FROM COMPANY GROUP BY NAME ORDER BY NAME;
+\q
+\l
+\l
+\q
+\l
+dropdb yourdb
+\l
+dropdb yourdb;
+\q
+\l
+\q
+\q
+\q
+\d
+\l
+\c capstone_demoapp_development
+\d
+\q
+\d
+\d cities
+\q
+\d
+\q
+\d
+\d cities
+\q
+\d
+drop cities;
+drop table cities;
+\d
+\q
+\d
+\q
+\d
+\q
+\q
+\d
+\d roles
+\d users
+\q
+\d
+\d images
+\d things
+\q
+\d
+select * from roles;
+select * from things;
+select * from users;
+\q
+select * from roles;
+select users
+\d
+select * from users;
+select * from users;
+select * from users;
+select * from roles where user="carol";
+select * from roles;
+select * from users;
+\d users
+\s roles
+\d roles
+select users, roles where roles.user_id = users.id;
+select role_name from users, roles where roles.user_id = users.id;
+select name, role_name from users, roles where roles.user_id = users.id;
+select name, role_name from users, roles where roles.user_id = users.id and (role_name="admin" or role_name="originator";
+);
+select name, role_name from users, roles where roles.user_id = users.id and (role_name="admin" or role_name="originator");
+select name, role_name from users, roles where roles.user_id = users.id and role_name="admin";
+select name, role_name from users, roles where roles.user_id = users.id and roles.role_name="admin";
+select name, role_name from users, roles where roles.user_id = users.id and roles.role_name="member";
+\d roles
+select name, role_name from users, roles where roles.user_id = users.id AND roles.role_name="member";
+select name, role_name from users, roles where roles.user_id = users.id having roles.role_name="member";
+select name, role_name from users, roles where roles.user_id = users.id having role_name="member";
+select name, role_name from users, roles where roles.user_id = users.id and role_name='member';
+select name, role_name from users, roles where roles.user_id = users.id and role_name='admin';
+select name, role_name from users, roles where roles.user_id = users.id and (role_name='admin' or role_name='originator';
+);
+select name, role_name from users, roles where roles.user_id = users.id and (role_name='admin' or role_name='originator');
+/q
+\q
+\d
+\d users
+\d roles
+select name, role_name from users, roles where roles.user_id = users.id and role_name='admin';
+select name, role_name from users, roles where roles.user_id = users.id and (role_name='admin' or role_name='originator');
+\q
+\d things
+select id, name form things;
+select id, name from things;
+\q
+ptourist.constant
+\q
+ptourist.constants
+self.class.parent == Admin
+self.class.parent == ptourist
+quit
+\q
+\q
+\d things
+\d
+\q
+\d
+\d businesses
+rake routes
+\q
+select * from businesses;
+\q
+\d businesses
+exit
+\q
+\d businesses
+exit
+\q
+\d businesses
+\q
+\d
+\d businesses
+\d services
+exit
+\q
+\d
+\d businesses
+\q
+\d
+\d businesses
+\d services
+\q
+\d
+\d services
+\q
+\d
+select * services;
+select * services
+select * rom services
+;
+select * from businesses;
+select * from services;
+select * from businesses;
+select * from businesses where id=1;
+select * from services, businesses where id=1;
+select * from services, businesses where id=1;
+select * from services;
+\d services
+\q
+\d services
+\q
+select * from services where service.name="B&O Information Services"
+select * from services where service.name="B&O Information Services";
+select * from services where service.name="B&O Information Services";
+select * from services where services.name="B&O Information Services";
+select * from services where name="B&O Information Services";
+select name from services where service.name="B&O Information Services";
+select name, id from services where services.name="B&O Information Services";
+select name, id from services where services.name='B&O Information Services';
+Services.count
+;
+Service.count
+;
+\q
+\d
+\d businesses
+select * from services;
+select * from businesses;
+\d services
+\q
+\d
+\d things
+\q
+\d business_services
+\q
+\d
+\q
+\d
+\q
+\d
+\q
+\d
+\q
+\d
+\d businesses_services
+\d business_services
+\d services
+\d
+\l
+\q
+\l
+\c capstone_demoapp_test
+\d
+\q
+\d
+\q
+\d
+\d roles
+exit
+quit
+\q
+\q
+\d
+\d roles
+\d Service
+\d services
+ SELECT "roles".* FROM "roles" WHERE "roles"."user_id" = $1 AND (mname is null or (mname='Service' and (mid is null or mid=NULL)))  [["user_id", 2]]
+SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "carol@bbunch.org"]]
+SELECT "roles".* FROM "roles" WHERE "roles"."user_id" = $1 AND (mname is null or (mname='Service' and (mid is null or mid=NULL)))  [["user_id", 2]]
+\d
+\d users
+select * from users;
+select * from users;
+SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "carol@bbunch.org"]];
+SELECT "roles".* FROM "roles" WHERE "roles"."user_id" = $1 AND (mname is null or (mname='Service' and (mid is null or mid=NULL)))  [["user_id", 2]]
+SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "carol@bbunch.org"]];
+SELECT "roles".* FROM "roles" WHERE "roles"."user_id" = $1 AND (mname is null or (mname='Service' and (mid is null or mid=NULL)))  [["user_id", 2]]
+;
+SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "carol@bbunch.org"]]
+\d
+\d users
+SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "carol@bbunch.org"]];
+SELECT  "users".* FROM "users" WHERE "users"."uid" = "carol@bbunch.org"
+SELECT  "users".* FROM "users"
+SELECT  "users".* FROM "users";
+\d
+\d users
+SELECT count(*) FROM users;
+SELECT count(*) FROM roles;
+Service.joins("join Roles r on r.mname='Service' and r.mid=Services.id and r.user_id=2").select("Services.*, r.role_name").first.attributes
+\q
+\d
+\d roles
+select "roles" from "roles" where "roles"."user_id" = 3 and mname="Service";
+select "roles" from "roles" where "roles"."user_id" = 3 and mname="Business";
+select "roles" from "roles" where "roles"."user_id" = 3 and (mname="Business");
+select "role" from "roles" where "roles"."user_id" = 3 and (mname="Business");
+select "role_name" from "roles" where "user_id" = 3 and (mname="Business");
+select "role_name", "mname" from "roles" where "user_id" = 3;
+select "role_name" from "roles" where "user_id" = 3 and (mname="Business");
+select "role_name" from "roles" where "user_id" = 3 and (mname='Business');
+select "role_name" from "roles" where "user_id" = 3 and mname='Business';
+select "role_name" from "roles" where "user_id" = 3 and mname='Service';
+select "role_name" from "roles" where "user_id" = 3 and (mname is null or (mname='Service' and (mid is null or mid=NULL)));
+select "role_name" from "roles" where "user_id" = 3 and mname='Service';
+select "role_name" from "roles" where "user_id" = 3 and (mname is null or (mname='Business' and (mid is null or mid=NULL)));
+select "role_name" from "roles" where "user_id" = 3 and (mname is null);
+select "role_name" from "roles" where "user_id" = 3 and (mname='Business' and (mid is null or mid=NULL));
+select "role_name" from "roles" where "user_id" = 3 and (mname='Service' and (mid is null or mid=NULL));
+\d
+\d roles
+select * from roles where user_id=3;
+select * from roles where user_id=2;
+select * from roles where user_id=0;
+select * from roles where user_id=1;
+select * from roles where user_id=2;
+select * from roles where user_id=3;
+select * from roles where user_id=4;
+select * from roles where user_id=4;
+select * from roles where user_id=1;
+select * from roles where user_id=2;
+select * from roles where user_id=3;
+select * from roles where user_id=6;
+select * from roles where user_id=4;
+select * from roles where user_id=1;
+select * from roles where user_id=2;
+select * from roles where user_id=3;
+select * from roles where user_id=4;
+select * from roles where user_id=5;
+select * from roles where user_id=1;
+select * from roles where user_id=2;
+select * from roles where user_id=2;
+select * from roles where user_id=2;
+select * from roles where user_id=2;
+select * from roles where user_id=2;
+select * from roles where user_id=1;
+select * from roles where user_id=2;
+\d
+\d businesses
+\d
+\d services
+\d roles
+select * from roles;
+select * from roles;
+\d
+\d businesses
+\d services
+select roles
+\d roles
+select id, user_id, role_name, mname, mid from roles;
+SELECT id, user_id, role_name, mname, mid from roles;
+SELECT user_id from roles WHERE mname="business" and mid=1;
+SELECT user_id from roles WHERE mname='business' and mid=1;
+SELECT id, user_id, role_name, mname, mid from roles;
+SELECT user_id from roles WHERE mname='Business' and mid=1;
+SELECT id, user_id, role_name, mname, mid from roles;
+SELECT id, user_id, role_name, mname, mid from roles;
+SELECT user_id from roles WHERE role_name='member' and mname='Business' and mid=1;
+SELECT user_id from roles WHERE role_name='member' and mname='Business' and mid=1;
+SELECT * from roles WHERE user_id=4;
+SELECT * from roles WHERE user_id=4 and role_name='member' and mid=1;
+SELECT user_id from roles WHERE mname='Business' and mid=1;
+SELECT role_name from role WHERE mname='Business' and mid=1 and user_id=4;
+SELECT role_name from roles WHERE mname='Business' and mid=1 and user_id=4;
+\d
+\d roles
+SELECT role_name from roles WHERE mname='Business' and mid=1 and user_id=4;
+SELECT role_name from roles WHERE mname='Business' and mid=1;
+SELECT role_name from roles WHERE mname='Service' and mid=1;
+SELECT role_name from roles WHERE mname='Service';
+SELECT role_name from roles WHERE mname='Service';
+SELECT role_name from roles WHERE mname='Service';
+SELECT * from roles WHERE user_id=4 and role_name='member' and mid=1;
+SELECT businesses.*, r.role_name FROM "businesses" join Roles r on r.mname='Business' and r.mid=Businesses.id and 
+          r.user_id =4
+;
+SELECT businesses.*, r.role_name FROM "businesses" join Roles r on r.mname='Business' and r.mid=Businesses.id and 
+          r.user_id =4;
+\d
+SELECT businesses.*, r.role_name FROM "businesses" join Roles r on r.mname='Business' and r.mid=1 and 
+          r.user_id =4;
+ r.user_id =4;
+SELECT businesses.*, r.role_name FROM "businesses" join Roles r on r.mname='Business' and r.mid=1 and 
+          r.user_id =4;
+SELECT  r.role_name FROM "businesses" join Roles r on r.mname='Business' and r.mid=1 and 
+          r.user_id =4;
+\d roles
+select role_name, mname, mid from roles;
+select role_name, mname, mid from roles where user_id=4;
+\d
+\d businesses
+\d services
+\d business_services
+select role_name, mname, mid from roles where user_id=4;
+select role_name, mname, mid from roles, business_services  where user_id=4 and service_id=1;
+select role_name, mname='Business', mid from roles, business_services  where user_id=4 and service_id=1;
+select role_name, mid from roles, business_services  where mname='Business' and user_id=4 and service_id=1;
+select role_name, business_id, service_id from business_services where business_id = service_id;
+select role_name, business_id, service_id from business_services, roles where business_id = service_id;
+select role_name, business_id, service_id from business_services, roles where business_id = service_id and user_id=4;
+select business_id, service_id from business_services where (business_id = service_id) and user_id=4;
+\d roles
+select mname, business_id, service_id from  roles, business_services where user_id=4;
+select mname, business_id, service_id, user_id from  roles, business_services where user_id=4;
+select * from  roles, business_services where user_id=4;
+select * from  roles inner join business_services where user_id=4;
+select * from  roles, business_services where user_id=4;
+SELECT business_services.*, businesses.name as business_name FROM "business_services" INNER JOIN "businesses" ON "businesses"."id" = "business_services"."business_id" WHERE "business_services"."service_id" = $1  ORDER BY "business_services"."priority" ASC  [["service_id", 1]]
+;
+SELECT business_services.*, businesses.name as business_name FROM "business_services" INNER JOIN "businesses" ON "businesses"."id" = "business_services"."business_id" WHERE "business_services"."service_id" = $1  ORDER BY "business_services"."priority" ASC  [["service_id", 1]];
+SELECT business_services.*, businesses.name as business_name FROM "business_services" INNER JOIN "businesses" ON "businesses"."id" = "business_services"."business_id" WHERE "business_services"."service_id" = $1  ORDER BY "business_services"."priority" ASC  [["service_id", 1]];
+SELECT business_services.*, businesses.name as business_name FROM "business_services" INNER JOIN "businesses" ON "businesses"."id" = "business_services"."business_id" WHERE "business_services"."service_id" = 1  ORDER BY "business_services"."priority" ASC;
+SELECT business_services.*, businesses.name as business_name FROM "business_services" INNER JOIN "businesses" ON "businesses"."id" = "business_services"."business_id" WHERE "business_services"."service_id" = 1  ORDER BY "business_services"."priority" ASC;
+\d businesses
+SELECT business_services.*, businesses.name as business_name, businesses.id as businesses_id FROM "business_services" INNER JOIN "businesses" ON "businesses"."id" = "business_services"."business_id" WHERE "business_services"."service_id" = 1  ORDER BY "business_services"."priority" ASC;
+\d roles
+SELECT role_name FROM roles WHERE mname="Business" and mid=businesses_id AND user_id=4;
+SELECT role_name FROM roles WHERE mname='Business' and mid=businesses_id AND user_id=4;
+SELECT role_name FROM roles WHERE mname='Business' and mid=1 AND user_id=4;
+\d roles
+\d businesses
+\d services
+\d
+SELECT role_name FROM roles \
+SELECT role_name FROM roles /
+where mname = 'Business';
+\d roles
+SELECT role_name 
+SELECT role_name FROM roles +
+WHERE mname = 'Business' AND user_id=4 AND mid = +
+SELECT businesses.id FROM businesses INNER JOIN business_services ON +
+businesses.id = business_services.business_id WHERE business_services.service_id = 1;
+SELECT role_name FROM roles 
+WHERE mname = 'Business' AND user_id=4 AND mid = 
+SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1;
+SELECT role_name FROM roles 
+WHERE mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+\d
+SELECT * FROM services;
+SELECT * FROM services, role_name from roles;
+SELECT * FROM services, role_name FROM roles;
+SELECT * FROM services;
+SELECT * FROM services, role_name FROM roles;
+rol = Role.find_by_sql( "SELECT * FROM services UNION role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1)")
+;
+rol = Role.find_by_sql( "SELECT * FROM services UNION role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1)");
+SELECT * FROM services UNION role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+rol = Role.find_by_sql( "(SELECT * FROM services) UNION (role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1))");
+(SELECT * FROM services) UNION (role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1));
+(SELECT * FROM services) UNION (SELECT role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1));
+\d roles
+rol = Role.find_by_sql( "SELECT * FROM services  JOIN SELECT role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1))");
+SELECT * FROM services  JOIN SELECT role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services  JOIN role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services  JOIN roles 
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services  JOIN roles 
+ON mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services  INNER JOIN roles 
+ON mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services LEFT JOIN roles 
+ON mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+\d services
+\d roles
+SELECT * FROM services LEFT JOIN roles 
+USING (creator_id = user_id) mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services INNER JOIN roles 
+USING (services.creator_id = roles.user_id) mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services INNER JOIN roles 
+ON (services.creator_id = roles.user_id) mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services INNER JOIN roles 
+ON (services.creator_id = roles.user_id) AND mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services INNER JOIN roles 
+ON (services.creator_id = roles.user_id) AND mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM services INNER JOIN roles 
+ON (services.creator_id = roles.user_id) AND mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+SELECT * FROM businesses INNER JOIN roles 
+ON (services.creator_id = roles.user_id) AND mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+\d businesses
+SELECT * FROM businesses INNER JOIN roles 
+ON (businesses.id = roles.mid AND mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+)
+;
+SELECT * FROM businesses INNER JOIN roles 
+ON (businesses.id = roles.mid AND mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1))
+SELECT * FROM businesses INNER JOIN roles 
+ON (businesses.id = roles.mid AND mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1);
+)
+;
+SELECT * FROM businesses INNER JOIN roles 
+ON (businesses.id = roles.mid AND mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1))
+SELECT * FROM businesses INNER JOIN roles 
+ON (businesses.id = roles.mid AND mname = 'Business' AND user_id=4 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1));
+SELECT services.*, r.role_name FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+SELECT services.* FROM services, r.role_name FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+SELECT services.*, r.role_name FROM services, roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+SELECT * FROM services;
+SELECT  r.role_name FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+SELECT * FROM roles;
+SELECT * FROM roles WHERE user_id=4;
+SELECT  r.role_name, r.mid FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+SELECT * from roles;
+\d
+SELECT * from images;
+SELECT  r.role_name, r.mid FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+\d business_services
+\d roles
+select * from business_services
+;
+SELECT  r.role_name, r.mid FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+res = SELECT  r.role_name, r.mid FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+\d images
+\d services
+SELECT  r.role_name, r.mid FROM roles r WHERE r.mname = 'Business' AND r.user_id=4 AND r.mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id= 2);
+SELECT role_name FROM roles 
+WHERE mname = 'Business' AND user_id=3 AND mid =
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1)
+;
+SELECT a.*, 
+(SELECT role_name FROM roles
+WHERE mname = 'Business' AND user_id=3 AND mid = 
+( SELECT businesses.id FROM businesses INNER JOIN business_services ON 
+businesses.id = business_services.business_id WHERE business_services.service_id = 1))
+FROM services a
+WHERE a.id=1;
+\d roles
+\d 
+\d businesses
+\d businesses_services
+\d business_services
+select * from businesses;
+select business_id, service_id  from businesses;
+SELECT business_id, service_id  from businesses;
+SELECT business_id, service_id  FROM businesses;
+SELECT  service_id  FROM businesses;
+SELECT  "service_id"  FROM businesses;
+SELECT  "service_id"  FROM businesses;
+\d business_services
+SELECT b.business_id, b.service_id  FROM businesses b;
+SELECT business_id, service_id  FROM business_services;
+SELECT id, name  FROM businesses;
+\s services;
+\s services;

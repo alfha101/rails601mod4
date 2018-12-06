@@ -39,6 +39,8 @@ group :development, :test do
   gem 'chromedriver-helper', '~>1.0.0'
   gem 'launchy', '~>2.4.3'
   gem 'simplecov', '~>0.12', :require=>false
+
+  gem 'colorize'
 end
 
 group :production do
