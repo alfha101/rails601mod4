@@ -19,7 +19,8 @@
         //override and add additional methods
       ServicesAuthz.prototype.canCreate=function() {
         //console.log("ItemsAuthz.canCreate");
-        return Authz.isAuthenticated();
+        //return Authz.isAuthenticated();
+        return Authz.isOrganizer();
       };
   
       return new ServicesAuthz();
